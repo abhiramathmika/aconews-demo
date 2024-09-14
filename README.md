@@ -129,7 +129,7 @@ This project uses the GNews API to fetch the latest news. You can sign up and ge
 
 You can view the full codebase and history of the project at the following repository:
 
-[https://github.com/yourusername/aconews](https://github.com/mirza7175/aconews)
+[https://github.com/mirza7175/aconews-demo](https://github.com/mirza7175/aconews)
 
 ---
 
