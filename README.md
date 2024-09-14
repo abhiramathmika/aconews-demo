@@ -27,7 +27,7 @@ ACONEWS is a sleek, responsive news aggregator that fetches the latest headlines
 6. GitHub Repository
 7. Summary of My Experience
 8. Special Thanks
-
+9. Note
 
 ---
 
@@ -156,4 +156,6 @@ There was that one moment when the app didn’t compile due to a typo in my `.en
 Big thanks to Acowale for providing to showcase my work, the GNews team for their awesome API and the Firebase team for providing such a smooth deployment experience.
 
 ---
+## Note
 
+The Gnews API allows 100 request per day. So if you are unable to see news it's because you have reached the daily request limit.
