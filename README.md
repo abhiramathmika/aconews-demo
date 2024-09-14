@@ -22,12 +22,11 @@ ACONEWS is a sleek, responsive news aggregator that fetches the latest headlines
 1. Features
 2. Setup and Installation
 3. Deployment
-4. Project Structure
-5. GNews API
-6. GitHub Repository
-7. Summary of My Experience
-8. Special Thanks
-9. Note
+4. GNews API
+5. GitHub Repository
+6. Summary of My Experience
+7. Special Thanks
+8. Note
 
 ---
 
@@ -98,23 +97,6 @@ Follow the prompts to set up Firebase Hosting.
 ### 4. Deploy
 ```bash
 firebase deploy
-```
-
----
-
-## 📂 Project Structure
-
-```
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── NewsCard.js
-│   │   └── Search.js
-│   ├── App.js
-│   ├── index.js
-│   ├── App.css
-│   └── .env
-└── README.md
 ```
 
 ---
