@@ -1,52 +1,73 @@
 import React, { useState, useEffect } from "react";
-
-import MovieCard from "./MovieCard";
+import NewsCard from "./NewsCard"; 
 import SearchIcon from "./search.svg";
 import "./App.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
+// Correct API URL
+const API_URL = "https://gnews.io/api/v4"; // Correct API endpoint
+const API_KEY = process.env.REACT_APP_GNEWS_API_KEY; // Use environment variable
 
 const App = () => {
+  
   const [searchTerm, setSearchTerm] = useState("");
-  const [movies, setMovies] = useState([]);
-
+  const [news, setNews] = useState([]);
+  
+  // Fetch news on page load with a default query (e.g., "latest" news)
   useEffect(() => {
-    searchMovies("searchTerm");
+    searchNews("latest");
   }, []);
 
-  const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
+  // Function to fetch news based on the search query
+  const searchNews = async (query) => {
+    try {
+      const response = await fetch(`${API_URL}/search?q=${query}&apikey=${API_KEY}`);
+      const data = await response.json();
 
-    setMovies(data.Search);
+      if (data.articles && data.articles.length > 0) {
+        setNews(data.articles); // GNews API returns articles directly
+      } else {
+        setNews([]); // If no articles are returned, set news to an empty array
+      }
+    } catch (error) {
+      console.error("Error fetching news:", error);
+      setNews([]); // Set to an empty array in case of error
+    }
+
   };
+    // Function to handle Enter key press
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter') {
+        searchNews(searchTerm || "latest");
+      }
+    };
 
   return (
     <div className="app">
-      <h1>FlimFlicks</h1>
+      <h1>ACONEWS</h1>
 
       <div className="search">
-        <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for movies"
-        />
+      <input
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleKeyDown} // Add keydown handler
+            placeholder="Search for news"
+          />
         <img
           src={SearchIcon}
           alt="search"
-          onClick={() => searchMovies(searchTerm)}
+          onClick={() => searchNews(searchTerm || "latest")} // Default to "latest" if the input is empty
         />
       </div>
 
-      {movies?.length > 0 ? (
+      {news?.length > 0 ? (
         <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
+          {news.map((article) => (
+            <NewsCard article={article} key={article.url} />
           ))}
         </div>
       ) : (
         <div className="empty">
-          <h2>No movies found</h2>
+          <h2>No news found</h2>
         </div>
       )}
     </div>
