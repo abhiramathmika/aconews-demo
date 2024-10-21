@@ -1,12 +1,3 @@
-# 🎯 Machine Test Challenge - ACONEWS
-This project was developed as part of a Machine Test Round (comapny - [Acowale](https://acowale.com/)). The task was to build a responsive and dynamic News App using the GNews API, with the following requirements:
-
-### ✅ Use a free-tier API key from GNews.
-### ✅ Build a responsive frontend that looks great across mobile, tablet, and desktop.
-### ✅ Create a backend to handle news filtering and search functionality.
-### ✅ Deploy the app on Firebase using its free tier for hosting.
-### ✅ Submit the project via a GitHub repository along with a summary of the process, challenges, and victories.
-
 
 
 # 🌟 ACONEWS - A Slick, Responsive News App Powered by GNews API 🌟
@@ -24,9 +15,7 @@ ACONEWS is a sleek, responsive news aggregator that fetches the latest headlines
 3. Deployment
 4. GNews API
 5. GitHub Repository
-6. Summary of My Experience
-7. Special Thanks
-8. Note
+6. Note
 
 ---
 
@@ -36,7 +25,7 @@ ACONEWS is a sleek, responsive news aggregator that fetches the latest headlines
 - **Slick and Responsive UI**: Designed with a clean, mobile-friendly layout to ensure a smooth user experience on all devices.
 - **Backend**: A streamlined backend ensures news delivery feels like it's coming from a seasoned journalist.
 - **Hosted on Firebase**: Deployed using Firebase Hosting for blazing-fast load times and simple deployment.
-- **GitHub Repository**: [View the source code](https://github.com/mirza7175/aconews) to check out the code structure, quality, and approach.
+- **GitHub Repository**: [View the source code](https://github.com/abhiramathmika/aconews) to check out the code structure, quality, and approach.
 
 ---
 
@@ -44,7 +33,7 @@ ACONEWS is a sleek, responsive news aggregator that fetches the latest headlines
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/mirza7175/aconews-demo.git
+git clone https://github.com/abhiramathmika/aconews-demo.git
 cd aconews-demo
 ```
 
@@ -111,33 +100,11 @@ This project uses the GNews API to fetch the latest news. You can sign up and ge
 
 You can view the full codebase and history of the project at the following repository:
 
-[https://github.com/mirza7175/aconews-demo](https://github.com/mirza7175/aconews)
+[https://github.com/abhiramathmika/aconews-demo](https://github.com/abhiramathmika/aconews)
+
 
 ---
 
-## 😅 Summary of My Experience
-
-Building ACONEWS was a fantastic learning experience. From fetching live data from the GNews API to designing a responsive frontend, it was a journey filled with challenges and victories. 
-
-### Victories:
-- **API Integration**: I successfully integrated the GNews API into the app, and seeing the live news feed for the first time was incredibly satisfying.
-- **Responsive Design**: Ensuring the UI looked sleek and responsive across various devices was a major achievement.
-- **Firebase Hosting**: Deploying the app to Firebase was quick and efficient, making the app accessible globally.
-
-### Challenges:
-- **API Key Management**: Handling environment variables across local and deployed environments took some trial and error.
-- **CSS Tweaks**: Ensuring pixel-perfect responsiveness had me pulling out my hair a few times!
-  
-### The Time I Cried:
-There was that one moment when the app didn’t compile due to a typo in my `.env` file that took far too long to figure out. After fixing it, I was back on track, feeling both relieved and empowered.
-
----
-
-## ❤️ Special Thanks
-
-Big thanks to Acowale for providing to showcase my work, the GNews team for their awesome API and the Firebase team for providing such a smooth deployment experience.
-
----
 ## Note
 
 The Gnews API allows 100 request per day. So if you are unable to see news it's because you have reached the daily request limit.
